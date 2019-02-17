@@ -106,13 +106,16 @@ def popular_hour(df):
     mode_hour = int(mode_hour)
     if mode_hour == 0:
         printed_hour = 12
-        time_of_day = 'am'
+        time_of_day = 'midnight'
     elif 1 <= mode_hour < 13:
         printed_hour = mode_hour
         time_of_day = 'am'
     elif 13 <= mode_hour < 24:
         printed_hour = mode_hour - 12
         time_of_day = 'pm'
+    elif mode_hour == 12:
+        printed_hour = 12
+        time_of_day = 'noon'
     print('The most popular start time for using bikeshare is {}{}.'.format(printed_hour, time_of_day))
 
 def trip_duration(df):
