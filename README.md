@@ -1,5 +1,7 @@
 ### Date created
-This project and README file was created on Feb 16, 2019.
+Bikeshare project was submitted and approved on Feb 13, 2019.
+README file was created on Feb 16, 2019.
+
 
 ### Project Title
 Bikeshare Python Project
