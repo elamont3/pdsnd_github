@@ -1,15 +1,16 @@
 ### Date created
-Include the date you created this project and README file.
+This project and README file was created on Feb 16, 2019.
 
 ### Project Title
-Replace the Project Title
+Bikeshare Python Project for Udacity Course
 
 ### Description
-Describe what your project is about and what it does
+The script prompts the user to filter bikeshare date by city and then, if desired, by the month or day of week. The information is then displayed with answers to the posed questions.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Created by Erin Lamont with assistance from stackoverflow resources
