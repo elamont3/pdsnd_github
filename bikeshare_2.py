@@ -129,10 +129,10 @@ def trip_duration(df):
     duration_hours = round(duration_hours,2)
     print('The total trip duration for your specified time period is the equivalent of {} seconds, {} minutes, or {} hours.'.format(total_duration, duration_minutes, duration_hours))
     # calculate average duration
-    average_duration = df['trip_duration'].mean()
-    average_duration = int(average_duration)
-    average_duration_minutes = average_duration / 60
-    average_duration_minutes = int(average_duration_minutes)
+    average_duration = int(df['trip_duration'].mean())
+    #average_duration = int(average_duration)
+    average_duration_minutes = int(average_duration / 60)
+    #average_duration_minutes = int(average_duration_minutes)
     average_duration_hours = average_duration_minutes / 60
     average_duration_hours = round(average_duration_hours,2)
     print('The average trip duration using bikeshare is the equivalent of {} seconds, {} minutes, or {} hours.'.format(average_duration, average_duration_minutes, average_duration_hours))
