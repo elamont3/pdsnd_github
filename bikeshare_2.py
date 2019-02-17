@@ -107,30 +107,33 @@ def popular_hour(df):
     mode_hour = int(mode_hour)
     if mode_hour == 0:
         printed_hour = 12
-        time_of_day = 'am'
+        time_of_day = 'midnight'
     elif 1 <= mode_hour < 13:
         printed_hour = mode_hour
         time_of_day = 'am'
     elif 13 <= mode_hour < 24:
         printed_hour = mode_hour - 12
         time_of_day = 'pm'
+    elif mode_hour == 12:
+        printed_hour = 12
+        time_of_day = 'noon'
     print('The most popular start time for using bikeshare is {}{}.'.format(printed_hour, time_of_day))
 
 def trip_duration(df):
     '''Determine total trip duration
     '''
-    total_duration = df['trip_duration'].sum()
-    total_duration = int(total_duration)
-    duration_minutes = total_duration / 60
-    duration_minutes = int(duration_minutes)
+    total_duration = int(df['trip_duration'].sum())
+    #total_duration = int(total_duration)
+    duration_minutes = int(total_duration / 60)
+    #duration_minutes = int(duration_minutes)
     duration_hours = duration_minutes / 60
     duration_hours = round(duration_hours,2)
     print('The total trip duration for your specified time period is the equivalent of {} seconds, {} minutes, or {} hours.'.format(total_duration, duration_minutes, duration_hours))
     # calculate average duration
-    average_duration = df['trip_duration'].mean()
-    average_duration = int(average_duration)
-    average_duration_minutes = average_duration / 60
-    average_duration_minutes = int(average_duration_minutes)
+    average_duration = int(df['trip_duration'].mean())
+    #average_duration = int(average_duration)
+    average_duration_minutes = int(average_duration / 60)
+    #average_duration_minutes = int(average_duration_minutes)
     average_duration_hours = average_duration_minutes / 60
     average_duration_hours = round(average_duration_hours,2)
     print('The average trip duration using bikeshare is the equivalent of {} seconds, {} minutes, or {} hours.'.format(average_duration, average_duration_minutes, average_duration_hours))
