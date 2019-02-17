@@ -79,6 +79,7 @@ def day_filter():
     end_date = start_date + timedelta(days=1)
     return (str(start_date), str(end_date))
 
+#Begin to calculate statistics based on the data
 def popular_month(df):
     '''Determine the most poular month
     '''
