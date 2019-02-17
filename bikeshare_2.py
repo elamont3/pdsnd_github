@@ -121,10 +121,10 @@ def popular_hour(df):
 def trip_duration(df):
     '''Determine total trip duration
     '''
-    total_duration = df['trip_duration'].sum()
-    total_duration = int(total_duration)
-    duration_minutes = total_duration / 60
-    duration_minutes = int(duration_minutes)
+    total_duration = int(df['trip_duration'].sum())
+    #total_duration = int(total_duration)
+    duration_minutes = int(total_duration / 60)
+    #duration_minutes = int(duration_minutes)
     duration_hours = duration_minutes / 60
     duration_hours = round(duration_hours,2)
     print('The total trip duration for your specified time period is the equivalent of {} seconds, {} minutes, or {} hours.'.format(total_duration, duration_minutes, duration_hours))
