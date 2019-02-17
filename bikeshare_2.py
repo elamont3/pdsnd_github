@@ -236,6 +236,8 @@ def statistics():
     if time_filter == 'n/a':
         start_time = time.time()
 
+#Display summary of statistics
+
         # Most popular start month
         popular_month(df_end)
         print("Seconds to calcuate: %s." % (time.time() - start_time))
